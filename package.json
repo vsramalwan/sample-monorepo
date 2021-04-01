@@ -24,7 +24,11 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "create-component": "nx generate component"
+    "create-component": "nx generate component",
+    "create-component-story": "nx generate component-story",
+    "create-library": "nx generate library",
+    "create-application": "nx generate application",
+    "create-stories": "nx generate stories"
   },
   "private": true,
   "dependencies": {
