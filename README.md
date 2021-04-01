@@ -1,5 +1,5 @@
 
-# SampleMonorepo
+# Sample Monorepo
 
 React-based sample monorepo using Nx, PNPM and typescript
 
@@ -12,7 +12,9 @@ Unlike npm or yarn, pnpm supports non-flat node_modules directory. It [uses syml
 Nx offers advance set of dev tools for monorepos with an opinionated project structure. It offers [incremental builds](https://nx.dev/latest/react/ci/incremental-builds) so that your code doesn't  rebuild or retest on every commit resulting in faster build times. Nx's (distributed) [computation cache](https://nx.dev/latest/react/core-concepts/computation-caching) doesn't recomputes the results of computation if already computed before. Nx's [code change analysis](https://nx.dev/latest/react/core-concepts/affected#code-changes-analysis) constructs a dependency graph of all projects in the workspace and then determines if what needs to be rebuilt and retested based on code changes. On top of this, Nx [community plugins](https://nx.dev/nx-community) are ocean of plugins. 
 
 #### How to start the app
-1. `pnpm nx serve page`
+0. Install pnpm globally `npm install -g pnpm` or `yarn global add pnpm`. 
+1. `pnpm nx serve page` or install nx globally `pnpm add -g nx` and run `nx serve page`
+2. To create a new React component run `pnpm create-component -- <component-name> --project=<project-name>`. Suffixing this command with `--dry-run` will show which files will be generated without writing to the disk.
 
 
 -----------------------------------------------------------------------------------------
