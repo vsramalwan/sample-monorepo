@@ -1,21 +1,26 @@
 
 # Sample Monorepo
 
-React-based sample monorepo using Nx, PNPM and typescript
+React-based sample monorepo using Nx and PNPM.
 
 
 ### PNPM as package manager
-Unlike npm or yarn, pnpm supports non-flat node_modules directory. It [uses symlinks](https://pnpm.js.org/motivation#creating-a-non-flat-node_modules-directory) and adds only direct dependencies to the root of node_modules directory. Owing to this fact, pnpm is faster and saves more disk space ac compared to npm or yarn.
-
+Unlike npm or yarn, pnpm supports non-flat node_modules directory. It [uses symlinks](https://pnpm.js.org/motivation#creating-a-non-flat-node_modules-directory) and adds only direct dependencies to the root of node_modules directory. Due to this, pnpm is faster and saves more disk space ac compared to npm or yarn. Benchmark is available [here](https://github.com/pnpm/benchmarks-of-javascript-package-managers#lots-of-files) and can be easily used in [CI](https://pnpm.js.org/continuous-integration). 
 
 ### Nx
-Nx offers advance set of dev tools for monorepos with an opinionated project structure. It offers [incremental builds](https://nx.dev/latest/react/ci/incremental-builds) so that your code doesn't  rebuild or retest on every commit resulting in faster build times. Nx's (distributed) [computation cache](https://nx.dev/latest/react/core-concepts/computation-caching) doesn't recomputes the results of computation if already computed before. Nx's [code change analysis](https://nx.dev/latest/react/core-concepts/affected#code-changes-analysis) constructs a dependency graph of all projects in the workspace and then determines if what needs to be rebuilt and retested based on code changes. On top of this, Nx [community plugins](https://nx.dev/nx-community) are ocean of plugins. 
+Nx toolkit offers advance set of dev tools for monorepos with an opinionated project structure. It offers [incremental builds](https://nx.dev/latest/react/ci/incremental-builds) so that your code doesn't  rebuild or retest on every commit resulting in faster build times. Nx's (distributed) [computation cache](https://nx.dev/latest/react/core-concepts/computation-caching) doesn't recomputes the results of computation if already computed before. Nx's [code change analysis](https://nx.dev/latest/react/core-concepts/affected#code-changes-analysis) constructs a dependency graph of all projects in the workspace and then determines if what needs to be rebuilt and retested based on code changes. Apart from this, Nx community [community plugins](https://nx.dev/nx-community) offers ocean of plugins. 
 
 #### How to start the app
 0. Install pnpm globally `npm install -g pnpm` or `yarn global add pnpm`. 
 1. `pnpm nx serve page` or install nx globally `pnpm add -g nx` and run `nx serve page`
 2. To create a new React component run `pnpm create-component -- <component-name> --project=<project-name>`. Suffixing this command with `--dry-run` will show which files will be generated without writing to the disk.
 
+#### Nx project structure explained
+- /apps: Keep it light-weight
+- /libs: all heavy-lifting done here
+- /tools: database scripts or deploy scripts and some Nx schematics
+- auto-generated prettier, eslint, jest and tsconfig which could be customised in their respective directories by individual apps/libs.
+- nx.json and workspace.json stores information related to all projects.
 
 -----------------------------------------------------------------------------------------
 
