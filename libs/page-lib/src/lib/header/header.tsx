@@ -8,7 +8,7 @@ export interface HeaderProps {}
 export function Header(props: HeaderProps) {
   return (
     <div>
-      <h1>This is header!</h1>
+      <h3>This is header!</h3>
     </div>
   );
 }
