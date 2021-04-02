@@ -20,11 +20,11 @@ Nx toolkit offers advance set of dev tools for monorepos with an opinionated pro
     * To generate stories for all components in library run `pnpm create-stories`
 
 #### Nx project structure explained
-- /apps: Main entry point for the app. Keep it light-weight
-- /libs: all heavy-lifting done here
-- /tools: database scripts or deploy scripts and some Nx schematics
-- auto-generated prettier, eslint, jest and tsconfig which could be customised in their respective directories by individual apps/libs.
-- nx.json and workspace.json stores information related to all projects.
+- /apps: Main entry point for the app. Must be light-weight!
+- /libs: All heavy-lifting done here.
+- /tools: Database scripts/deploy scripts and Nx schematics.
+- Auto-generated prettier, eslint, jest and tsconfig for the workspace. Could be customised in respective directories of apps/libs.
+- nx.json and workspace.json: Meta information related to all projects in the workspace.
 
 -----------------------------------------------------------------------------------------
 
