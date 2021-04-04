@@ -27,6 +27,9 @@ Nx toolkit offers advance set of dev tools for monorepos with an opinionated pro
 - nx.json and workspace.json: Meta information related to all projects in the workspace.
 - Dependency Graph: ![Dependency Graph](https://github.com/vsramalwan/sample-monorepo/blob/main/docs/dep-graph.png "dep-graph")
 
+### Thanks/Inpiration
+- [Sample Monorepo](https://github.com/wixplosives/sample-monorepo)- Sample monorepo setup with yarn workspaces, typescript, and lerna
+
 -----------------------------------------------------------------------------------------
 
 
