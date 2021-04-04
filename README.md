@@ -25,6 +25,7 @@ Nx toolkit offers advance set of dev tools for monorepos with an opinionated pro
 - /tools: Database scripts/deploy scripts and Nx schematics.
 - Auto-generated prettier, eslint, jest and tsconfig for the workspace. Could be customised in respective directories of apps/libs.
 - nx.json and workspace.json: Meta information related to all projects in the workspace.
+- ![Dependency Graph](https://github.com/vsramalwan/sample-monorepo/blob/main/docs/dep-graph.png "dep-graph")
 
 -----------------------------------------------------------------------------------------
 
