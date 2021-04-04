@@ -4,7 +4,8 @@ on:
     branches:
       - main
 jobs:
-  version:
+  release:
+    name: Release
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
@@ -26,9 +27,9 @@ jobs:
           version: 5.18.9
           run_install: |
             args: [--frozen-lockfile]
-      - name: install dependencies
-        run: pnpm install
-      - name: create versions
+      - name: Test
+        run: pnpm test
+      - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@master
         with:
           version: pnpm ci:version
@@ -37,3 +38,4 @@ jobs:
           title: 'chore: update versions'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
