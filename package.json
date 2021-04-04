@@ -28,7 +28,12 @@
     "create-component-story": "nx generate component-story",
     "create-library": "nx generate library",
     "create-application": "nx generate application",
-    "create-stories": "nx generate stories"
+    "create-stories": "nx generate stories",
+    "preinstall": "npx only-allow pnpm",
+    "changeset": "changeset",
+    "ci:build": "pnpm run build -r",
+    "ci:publish": "pnpm run build -r && changeset publish",
+    "ci:version": "changeset version"
   },
   "private": true,
   "dependencies": {
