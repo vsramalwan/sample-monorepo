@@ -1,0 +1,14 @@
+name: test
+
+on:
+  push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install and run test
+        run: | 
+          npm i -g pnpm
+          pnpm install
+          pnpm test
