@@ -10,7 +10,10 @@ jobs:
   release:
     name: Release
     timeout-minutes: 15
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
     steps:
       - name: checkout code repository
         uses: actions/checkout@v2
@@ -33,12 +36,12 @@ jobs:
           run_install: |
             args: [--frozen-lockfile]
       - name: Creating .npmrc
-          run: |
-            cat << EOF > "$HOME/.npmrc"
-              //registry.npmjs.org/:_authToken=$NPM_TOKEN
-            EOF
-          env:
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@master
         with:
