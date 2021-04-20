@@ -30,8 +30,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-#      - name: set pnpm store directory
-#        run: pnpm config set store-dir ${{ env.pnpm_store_path }}
       - name: cache pnpm modules
         uses: actions/cache@v2
         env:
@@ -67,8 +65,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-#      - name: set pnpm store directory
-#        run: pnpm config set store-dir ${{ env.pnpm_store_path }}
       - name: cache pnpm modules
         uses: actions/cache@v2
         env:
@@ -106,8 +102,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-#      - name: set pnpm store directory
-#        run: pnpm config set store-dir ${{ env.pnpm_store_path }}
       - name: cache pnpm modules
         uses: actions/cache@v2
         env:
@@ -143,8 +137,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-#      - name: set pnpm store directory
-#        run: pnpm config set store-dir ${{ env.pnpm_store_path }}
       - name: cache pnpm modules
         uses: actions/cache@v2
         env:
