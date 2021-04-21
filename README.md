@@ -1,3 +1,4 @@
+[![Release](https://github.com/vsramalwan/sample-monorepo/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/vsramalwan/sample-monorepo/actions/workflows/release.yml)
 # Sample Monorepo
 
 React-based sample monorepo using Nx and pnpm.
