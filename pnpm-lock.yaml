@@ -19,7 +19,7 @@ specifiers:
   '@types/jest': 26.0.22
   '@types/node': 14.14.33
   '@types/react': 16.9.56
-  '@types/react-dom': 16.9.9
+  '@types/react-dom': 16.9.12
   '@typescript-eslint/eslint-plugin': 4.3.0
   '@typescript-eslint/parser': 4.3.0
   babel-jest: 26.2.2
@@ -72,7 +72,7 @@ devDependencies:
   '@types/jest': 26.0.22
   '@types/node': 14.14.33
   '@types/react': 16.9.56
-  '@types/react-dom': 16.9.9
+  '@types/react-dom': 16.9.12
   '@typescript-eslint/eslint-plugin': 4.3.0_994d979c051549b216df6838c5973d27
   '@typescript-eslint/parser': 4.3.0_eslint@7.10.0+typescript@4.0.7
   babel-jest: 26.2.2_@babel+core@7.13.16
@@ -4188,8 +4188,8 @@ packages:
     resolution: {integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==}
     dev: true
 
-  /@types/react-dom/16.9.9:
-    resolution: {integrity: sha512-jE16FNWO3Logq/Lf+yvEAjKzhpST/Eac8EMd1i4dgZdMczfgqC8EjpxwNgEe3SExHYLliabXDh9DEhhqnlXJhg==}
+  /@types/react-dom/16.9.12:
+    resolution: {integrity: sha512-i7NPZZpPte3jtVOoW+eLB7G/jsX5OM6GqQnH+lC0nq0rqwlK0x8WcMEvYDgFWqWhWMlTltTimzdMax6wYfZssA==}
     dependencies:
       '@types/react': 16.9.56
     dev: true
