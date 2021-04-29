@@ -16,7 +16,7 @@ specifiers:
   '@nrwl/web': 11.6.0
   '@nrwl/workspace': 11.6.0
   '@testing-library/react': 11.2.6
-  '@types/jest': 26.0.22
+  '@types/jest': 26.0.23
   '@types/node': 14.14.43
   '@types/react': 17.0.4
   '@types/react-dom': 17.0.3
@@ -69,7 +69,7 @@ devDependencies:
   '@nrwl/web': 11.6.0_f1d6e966c144b7f8f5d86f3294c828b4
   '@nrwl/workspace': 11.6.0_prettier@2.2.1
   '@testing-library/react': 11.2.6_react-dom@17.0.2+react@17.0.2
-  '@types/jest': 26.0.22
+  '@types/jest': 26.0.23
   '@types/node': 14.14.43
   '@types/react': 17.0.4
   '@types/react-dom': 17.0.3
@@ -3355,7 +3355,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-reports': 3.0.0
-      '@types/node': 14.14.41
+      '@types/node': 14.14.43
       '@types/yargs': 15.0.13
       chalk: 4.1.0
     dev: true
@@ -4100,8 +4100,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/26.0.22:
-    resolution: {integrity: sha512-eeWwWjlqxvBxc4oQdkueW5OF/gtfSceKk4OnOAGlUSwS/liBRtZppbJuz1YkgbrbfGOoeBHun9fOvXnjNwrSOw==}
+  /@types/jest/26.0.23:
+    resolution: {integrity: sha512-ZHLmWMJ9jJ9PTiT58juykZpL7KjwJywFN3Rr2pTSkyQfydf/rk22yS7W8p5DaVUMQ2BQC7oYiU3FjbTM/mYrOA==}
     dependencies:
       jest-diff: 26.6.2
       pretty-format: 26.6.2
