@@ -19,7 +19,7 @@ specifiers:
   '@types/jest': 26.0.23
   '@types/node': 14.14.44
   '@types/react': 17.0.5
-  '@types/react-dom': 17.0.3
+  '@types/react-dom': 17.0.4
   '@typescript-eslint/eslint-plugin': 4.22.1
   '@typescript-eslint/parser': 4.22.1
   babel-jest: 26.6.3
@@ -72,7 +72,7 @@ devDependencies:
   '@types/jest': 26.0.23
   '@types/node': 14.14.44
   '@types/react': 17.0.5
-  '@types/react-dom': 17.0.3
+  '@types/react-dom': 17.0.4
   '@typescript-eslint/eslint-plugin': 4.22.1_b96c9280c6ac79e4dfcda76a733858e3
   '@typescript-eslint/parser': 4.22.1_eslint@7.26.0+typescript@4.2.4
   babel-jest: 26.6.3_@babel+core@7.14.0
@@ -4429,18 +4429,10 @@ packages:
     resolution: {integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==}
     dev: true
 
-  /@types/react-dom/17.0.3:
-    resolution: {integrity: sha512-4NnJbCeWE+8YBzupn/YrJxZ8VnjcJq5iR1laqQ1vkpQgBiA7bwk0Rp24fxsdNinzJY2U+HHS4dJJDPdoMjdJ7w==}
+  /@types/react-dom/17.0.4:
+    resolution: {integrity: sha512-Wb6rlnPJfqbhpkvYN39y1NM/pOGGPzzIRquu0RdUMvTwgXNvASFO7pdtrtvyxGTQNb9wzBaQxXAWDdEqegZw2A==}
     dependencies:
-      '@types/react': 16.14.5
-    dev: true
-
-  /@types/react/16.14.5:
-    resolution: {integrity: sha512-YRRv9DNZhaVTVRh9Wmmit7Y0UFhEVqXqCSw3uazRWMxa2x85hWQZ5BN24i7GXZbaclaLXEcodEeIHsjBA8eAMw==}
-    dependencies:
-      '@types/prop-types': 15.7.3
-      '@types/scheduler': 0.16.1
-      csstype: 3.0.7
+      '@types/react': 17.0.5
     dev: true
 
   /@types/react/17.0.5:
