@@ -15,7 +15,7 @@ specifiers:
   '@nrwl/tao': 12.4.0
   '@nrwl/web': 12.4.0
   '@nrwl/workspace': 12.4.0
-  '@testing-library/react': 11.2.7
+  '@testing-library/react': 12.0.0
   '@types/jest': 26.0.23
   '@types/node': 14.17.3
   '@types/react': 17.0.11
@@ -68,7 +68,7 @@ devDependencies:
   '@nrwl/tao': 12.4.0
   '@nrwl/web': 12.4.0_d730c4242fe1065e3d2cd4e8beb1ec91
   '@nrwl/workspace': 12.4.0_prettier@2.3.1
-  '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@types/jest': 26.0.23
   '@types/node': 14.17.3
   '@types/react': 17.0.11
@@ -98,12 +98,6 @@ packages:
     resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}
     dependencies:
       '@babel/highlight': 7.14.5
-    dev: true
-
-  /@babel/code-frame/7.12.13:
-    resolution: {integrity: sha512-HV1Cm0Q3ZrpCR93tkWOYiuYIgLxZXZFVG2VgK+MBWjUqZTundupbfx2aXarXuw5Ko5aMcjtJgbSs4vUGBS5v6g==}
-    dependencies:
-      '@babel/highlight': 7.13.10
     dev: true
 
   /@babel/code-frame/7.14.5:
@@ -409,10 +403,6 @@ packages:
       '@babel/types': 7.14.5
     dev: true
 
-  /@babel/helper-validator-identifier/7.14.0:
-    resolution: {integrity: sha512-V3ts7zMSu5lfiwWDVWzRDGIN+lnCEUdaXgtVHJgLb1rGaA6jMrtB9EmE7L18foXJIE8Un/A/h6NJfGQp/e1J4A==}
-    dev: true
-
   /@babel/helper-validator-identifier/7.14.5:
     resolution: {integrity: sha512-5lsetuxCLilmVGyiLEfoHBRX8UCFD+1m2x3Rj97WrW3V7H3u4RWRXA4evMjImCsin2J2YT0QaVDGf+z8ondbAg==}
     engines: {node: '>=6.9.0'}
@@ -444,14 +434,6 @@ packages:
       '@babel/types': 7.14.5
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/highlight/7.13.10:
-    resolution: {integrity: sha512-5aPpe5XQPzflQrFwL1/QoeHkP2MsA4JCntcXHRhEsdsfPVkvPi2w7Qix4iV7t5S/oC9OodGrggd8aco1g3SZFg==}
-    dependencies:
-      '@babel/helper-validator-identifier': 7.14.0
-      chalk: 2.4.2
-      js-tokens: 4.0.0
     dev: true
 
   /@babel/highlight/7.14.5:
@@ -3582,29 +3564,29 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/dom/7.30.3:
-    resolution: {integrity: sha512-7JhIg2MW6WPwyikH2iL3o7z+FTVgSOd2jqCwTAHqK7Qal2gRRYiUQyURAxtbK9VXm/UTyG9bRihv8C5Tznr2zw==}
-    engines: {node: '>=10'}
+  /@testing-library/dom/8.0.0:
+    resolution: {integrity: sha512-Ym375MTOpfszlagRnTMO+FOfTt6gRrWiDOWmEnWLu9OvwCPOWtK6i5pBHmZ07wUJiQ7wWz0t8+ZBK2wFo2tlew==}
+    engines: {node: '>=12'}
     dependencies:
-      '@babel/code-frame': 7.12.13
+      '@babel/code-frame': 7.14.5
       '@babel/runtime': 7.13.10
       '@types/aria-query': 4.2.1
       aria-query: 4.2.2
       chalk: 4.1.0
-      dom-accessibility-api: 0.5.4
+      dom-accessibility-api: 0.5.6
       lz-string: 1.4.4
-      pretty-format: 26.6.2
+      pretty-format: 27.0.2
     dev: true
 
-  /@testing-library/react/11.2.7_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA==}
-    engines: {node: '>=10'}
+  /@testing-library/react/12.0.0_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-sh3jhFgEshFyJ/0IxGltRhwZv2kFKfJ3fN1vTZ6hhMXzz9ZbbcTgmDYM4e+zJv+oiVKKEWZPyqPAh4MQBI65gA==}
+    engines: {node: '>=12'}
     peerDependencies:
       react: '*'
       react-dom: '*'
     dependencies:
       '@babel/runtime': 7.13.10
-      '@testing-library/dom': 7.30.3
+      '@testing-library/dom': 8.0.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: true
@@ -6424,8 +6406,8 @@ packages:
     deprecated: V0 is gone and the best V1 polyfill is now @ungap/custom-elements
     dev: false
 
-  /dom-accessibility-api/0.5.4:
-    resolution: {integrity: sha512-TvrjBckDy2c6v6RLxPv5QXOnU+SmF9nBII5621Ve5fu6Z/BDrENurBEvlC1f44lKEUVqOpK4w9E5Idc5/EgkLQ==}
+  /dom-accessibility-api/0.5.6:
+    resolution: {integrity: sha512-DplGLZd8L1lN64jlT27N9TVSESFR5STaEJvX+thCby7fuCHonfPpAlodYc3vuUYbDuDec5w8AMP7oCM5TWFsqw==}
     dev: true
 
   /dom-serializer/0.2.2:
