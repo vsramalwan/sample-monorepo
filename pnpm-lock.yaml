@@ -18,7 +18,7 @@ specifiers:
   '@testing-library/react': 12.0.0
   '@types/jest': 26.0.23
   '@types/node': 14.17.4
-  '@types/react': 17.0.11
+  '@types/react': 17.0.13
   '@types/react-dom': 17.0.8
   '@typescript-eslint/eslint-plugin': 4.28.1
   '@typescript-eslint/parser': 4.28.1
@@ -71,7 +71,7 @@ devDependencies:
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@types/jest': 26.0.23
   '@types/node': 14.17.4
-  '@types/react': 17.0.11
+  '@types/react': 17.0.13
   '@types/react-dom': 17.0.8
   '@typescript-eslint/eslint-plugin': 4.28.1_3b707c2a5a0917891f3a39746f7412f0
   '@typescript-eslint/parser': 4.28.1_eslint@7.29.0+typescript@4.3.5
@@ -3618,6 +3618,14 @@ packages:
 
   /@types/react/17.0.11:
     resolution: {integrity: sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==}
+    dependencies:
+      '@types/prop-types': 15.7.3
+      '@types/scheduler': 0.16.1
+      csstype: 3.0.7
+    dev: true
+
+  /@types/react/17.0.13:
+    resolution: {integrity: sha512-D/G3PiuqTfE3IMNjLn/DCp6umjVCSvtZTPdtAFy5+Ved6CsdRvivfKeCzw79W4AatShtU4nGqgvOv5Gro534vQ==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
