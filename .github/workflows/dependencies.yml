@@ -32,7 +32,7 @@ jobs:
           args: [--frozen-lockfile]
 
     - name: package-update
-      uses: vsramalwan/actions-package-update@master
+      uses: vsramalwan/actions-package-update@eb5a57c43b045de109df8de4ec80373e37ed1ce1
       env:
         AUTHOR_EMAIL: john@example.com
         AUTHOR_NAME: john
