@@ -16,7 +16,7 @@ specifiers:
   '@nrwl/web': 12.6.5
   '@nrwl/workspace': 12.6.5
   '@testing-library/react': 12.0.0
-  '@types/jest': 26.0.24
+  '@types/jest': 27.0.0
   '@types/node': 14.17.9
   '@types/react': 17.0.16
   '@types/react-dom': 17.0.9
@@ -69,7 +69,7 @@ devDependencies:
   '@nrwl/web': 12.6.5_64af3658eefdfb3f1bbfe4eedd1960a3
   '@nrwl/workspace': 12.6.5_prettier@2.3.2+ts-node@10.2.0
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
-  '@types/jest': 26.0.24
+  '@types/jest': 27.0.0
   '@types/node': 14.17.9
   '@types/react': 17.0.16
   '@types/react-dom': 17.0.9
@@ -88,7 +88,7 @@ devDependencies:
   jest: 27.0.6_ts-node@10.2.0
   pnpm: 6.0.2
   prettier: 2.3.2
-  ts-jest: 27.0.4_027a07422bb5c3b061481c226b8eeb29
+  ts-jest: 27.0.4_46121daf96957dcd433bbe9ab90c095b
   ts-node: 10.2.0_3cddbd81c3a53971a7cbc3c93cba6165
   typescript: 4.3.5
 
@@ -3865,7 +3865,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-reports': 3.0.0
-      '@types/node': 14.17.5
+      '@types/node': 14.17.9
       '@types/yargs': 15.0.13
       chalk: 4.1.0
     dev: true
@@ -4688,8 +4688,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/26.0.24:
-    resolution: {integrity: sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==}
+  /@types/jest/27.0.0:
+    resolution: {integrity: sha512-IlpQZVpxufe+3qPaAqEoSPHVSxnJh1cf0BqqWHJeKiAUbwnHdmNzjP3ZCWSZSTbmAGXQPNk9QmM3Bif0pR54rg==}
     dependencies:
       jest-diff: 26.6.2
       pretty-format: 26.6.2
@@ -4721,10 +4721,6 @@ packages:
 
   /@types/node/14.17.4:
     resolution: {integrity: sha512-8kQ3+wKGRNN0ghtEn7EGps/B8CzuBz1nXZEIGGLP2GnwbqYn4dbTs7k+VKLTq1HvZLRCIDtN3Snx1Ege8B7L5A==}
-    dev: true
-
-  /@types/node/14.17.5:
-    resolution: {integrity: sha512-bjqH2cX/O33jXT/UmReo2pM7DIJREPMnarixbQ57DOOzzFaI6D2+IcwaJQaJpv0M1E9TIhPCYVxrkcityLjlqA==}
     dev: true
 
   /@types/node/14.17.7:
@@ -14446,7 +14442,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/27.0.4_027a07422bb5c3b061481c226b8eeb29:
+  /ts-jest/27.0.4_46121daf96957dcd433bbe9ab90c095b:
     resolution: {integrity: sha512-c4E1ECy9Xz2WGfTMyHbSaArlIva7Wi2p43QOMmCqjSSjHP06KXv+aT+eSY+yZMuqsMi3k7pyGsGj2q5oSl5WfQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -14465,7 +14461,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.15.0
-      '@types/jest': 26.0.24
+      '@types/jest': 27.0.0
       babel-jest: 27.0.6_@babel+core@7.15.0
       bs-logger: 0.2.6
       buffer-from: 1.1.1
