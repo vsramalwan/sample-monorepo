@@ -24,7 +24,7 @@ specifiers:
   '@typescript-eslint/parser': 4.29.1
   babel-jest: 27.0.6
   core-js: ^3.10.1
-  cypress: 8.2.0
+  cypress: 8.3.0
   document-register-element: 1.14.10
   dotenv: 10.0.0
   eslint: 7.32.0
@@ -40,7 +40,7 @@ specifiers:
   react: 17.0.2
   react-dom: 17.0.2
   regenerator-runtime: 0.13.9
-  ts-jest: 27.0.4
+  ts-jest: 27.0.5
   ts-node: ~10.2.0
   tslib: ^2.2.0
   typescript: 4.3.5
@@ -60,13 +60,13 @@ devDependencies:
   '@babel/preset-typescript': 7.15.0_@babel+core@7.15.0
   '@changesets/cli': 2.16.0
   '@nrwl/cli': 12.7.1
-  '@nrwl/cypress': 12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3
+  '@nrwl/cypress': 12.7.1_bf5d703187894082aa11703eac163abf
   '@nrwl/eslint-plugin-nx': 12.7.1_9f342f1e8cadc51639db5616b36f8e64
   '@nrwl/jest': 12.7.1_ts-node@10.2.0
   '@nrwl/linter': 12.7.1
-  '@nrwl/react': 12.7.1_17d8b91e9de87739220b0601f35de61a
+  '@nrwl/react': 12.7.1_b0ba09ba05665b0635d8c19e18c10c69
   '@nrwl/tao': 12.7.1
-  '@nrwl/web': 12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3
+  '@nrwl/web': 12.7.1_bf5d703187894082aa11703eac163abf
   '@nrwl/workspace': 12.7.1_prettier@2.3.2+ts-node@10.2.0
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@types/jest': 27.0.1
@@ -76,7 +76,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 4.29.1_d4376362794b743c19f4cba25c7fc6f5
   '@typescript-eslint/parser': 4.29.1_eslint@7.32.0+typescript@4.3.5
   babel-jest: 27.0.6_@babel+core@7.15.0
-  cypress: 8.2.0
+  cypress: 8.3.0
   dotenv: 10.0.0
   eslint: 7.32.0
   eslint-config-prettier: 8.3.0_eslint@7.32.0
@@ -88,7 +88,7 @@ devDependencies:
   jest: 27.0.6_ts-node@10.2.0
   pnpm: 6.0.2
   prettier: 2.3.2
-  ts-jest: 27.0.4_10128d06e73975bf11c4611b081c51df
+  ts-jest: 27.0.5_10128d06e73975bf11c4611b081c51df
   ts-node: 10.2.0_3cddbd81c3a53971a7cbc3c93cba6165
   typescript: 4.3.5
 
@@ -2008,7 +2008,7 @@ packages:
       yargs-parser: 20.0.0
     dev: true
 
-  /@nrwl/cypress/12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3:
+  /@nrwl/cypress/12.7.1_bf5d703187894082aa11703eac163abf:
     resolution: {integrity: sha512-xr8CKrmg0UashIT1WgFygKzz1uj6CbL3CPh+FDzrau0mZwT5QtBMiOh+00B7ox26RhO+w9pH6obCJGOJuamuiQ==}
     peerDependencies:
       cypress: '>= 3 < 8'
@@ -2018,7 +2018,7 @@ packages:
       '@nrwl/linter': 12.7.1
       '@nrwl/workspace': 12.7.1_prettier@2.3.2+ts-node@10.2.0
       chalk: 4.1.0
-      cypress: 8.2.0
+      cypress: 8.3.0
       fork-ts-checker-webpack-plugin: 6.2.10
       rxjs: 6.6.7
       ts-loader: 5.4.5_typescript@4.3.5
@@ -2107,17 +2107,17 @@ packages:
       tslib: 2.2.0
     dev: true
 
-  /@nrwl/react/12.7.1_17d8b91e9de87739220b0601f35de61a:
+  /@nrwl/react/12.7.1_b0ba09ba05665b0635d8c19e18c10c69:
     resolution: {integrity: sha512-tRdWE+mAjxR+zkOw2IQYpDgG7141yBkHgSV+IWGipxYrQQO3OPYaX+m9AqXIY3yOA16JgQD4swG9Bn05P27Wmw==}
     dependencies:
       '@babel/core': 7.15.0
       '@babel/preset-react': 7.14.5_@babel+core@7.15.0
-      '@nrwl/cypress': 12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3
+      '@nrwl/cypress': 12.7.1_bf5d703187894082aa11703eac163abf
       '@nrwl/devkit': 12.7.1
       '@nrwl/jest': 12.7.1_ts-node@10.2.0
       '@nrwl/linter': 12.7.1
-      '@nrwl/storybook': 12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3
-      '@nrwl/web': 12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3
+      '@nrwl/storybook': 12.7.1_bf5d703187894082aa11703eac163abf
+      '@nrwl/web': 12.7.1_bf5d703187894082aa11703eac163abf
       '@nrwl/workspace': 12.7.1_prettier@2.3.2+ts-node@10.2.0
       '@pmmmwh/react-refresh-webpack-plugin': 0.4.3_90641efad7f27dfb475d0cbee850a43a
       '@storybook/node-logger': 6.1.20
@@ -2157,10 +2157,10 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /@nrwl/storybook/12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3:
+  /@nrwl/storybook/12.7.1_bf5d703187894082aa11703eac163abf:
     resolution: {integrity: sha512-yi2xTUpFYAZQL/6NRZo4AwEJpjS/5niZA6V6m3Be9MgAwzuOaQ9eac7tRm5UYkxXBZ97IFUDETCBQzN/piqSrg==}
     dependencies:
-      '@nrwl/cypress': 12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3
+      '@nrwl/cypress': 12.7.1_bf5d703187894082aa11703eac163abf
       '@nrwl/devkit': 12.7.1
       '@nrwl/linter': 12.7.1
       '@nrwl/workspace': 12.7.1_prettier@2.3.2+ts-node@10.2.0
@@ -2198,7 +2198,7 @@ packages:
       yargs-parser: 20.0.0
     dev: true
 
-  /@nrwl/web/12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3:
+  /@nrwl/web/12.7.1_bf5d703187894082aa11703eac163abf:
     resolution: {integrity: sha512-3fo81LwSgDec/+DMDJQa87ES8DjA24+Xdt2sc0xc7pwGTHjPlbi6Bda2YYFIO7iLgucUggwEMubQijHkgNO/dA==}
     dependencies:
       '@babel/core': 7.15.0
@@ -2209,7 +2209,7 @@ packages:
       '@babel/preset-env': 7.15.0_@babel+core@7.15.0
       '@babel/preset-typescript': 7.15.0_@babel+core@7.15.0
       '@babel/runtime': 7.14.8
-      '@nrwl/cypress': 12.7.1_64af3658eefdfb3f1bbfe4eedd1960a3
+      '@nrwl/cypress': 12.7.1_bf5d703187894082aa11703eac163abf
       '@nrwl/devkit': 12.7.1
       '@nrwl/jest': 12.7.1_ts-node@10.2.0
       '@nrwl/linter': 12.7.1
@@ -5032,8 +5032,8 @@ packages:
     resolution: {integrity: sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=}
     dev: true
 
-  /cypress/8.2.0:
-    resolution: {integrity: sha512-jg7S5VxxslwsgEyAkCE9ZCkFADxOUY1bSWScp1cWnga88K0TZgFQ0zdxyG9Mw/4spLGuvkriIZ62am+TR6C04w==}
+  /cypress/8.3.0:
+    resolution: {integrity: sha512-zA5Rcq8AZIfRfPXU0CCcauofF+YpaU9HYbfqkunFTmFV0Kdlo14tNjH2E3++MkjXKFnv3/pXq+HgxWtw8CSe8Q==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
@@ -12293,13 +12293,13 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-jest/27.0.4_10128d06e73975bf11c4611b081c51df:
-    resolution: {integrity: sha512-c4E1ECy9Xz2WGfTMyHbSaArlIva7Wi2p43QOMmCqjSSjHP06KXv+aT+eSY+yZMuqsMi3k7pyGsGj2q5oSl5WfQ==}
+  /ts-jest/27.0.5_10128d06e73975bf11c4611b081c51df:
+    resolution: {integrity: sha512-lIJApzfTaSSbtlksfFNHkWOzLJuuSm4faFAfo5kvzOiRAuoN4/eKxVJ2zEAho8aecE04qX6K1pAzfH5QHL1/8w==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
     peerDependencies:
       '@babel/core': '>=7.0.0-beta.0 <8'
-      '@types/jest': ^26.0.0
+      '@types/jest': ^27.0.0
       babel-jest: '>=27.0.0 <28'
       jest: ^27.0.0
       typescript: '>=3.8 <5.0'
@@ -12315,14 +12315,12 @@ packages:
       '@types/jest': 27.0.1
       babel-jest: 27.0.6_@babel+core@7.15.0
       bs-logger: 0.2.6
-      buffer-from: 1.1.1
       fast-json-stable-stringify: 2.1.0
       jest: 27.0.6_ts-node@10.2.0
       jest-util: 27.0.6
       json5: 2.2.0
       lodash: 4.17.21
       make-error: 1.3.6
-      mkdirp: 1.0.4
       semver: 7.3.5
       typescript: 4.3.5
       yargs-parser: 20.2.7
