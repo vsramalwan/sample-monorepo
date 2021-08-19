@@ -17,7 +17,7 @@ specifiers:
   '@nrwl/workspace': 12.7.2
   '@testing-library/react': 12.0.0
   '@types/jest': 27.0.1
-  '@types/node': 14.17.9
+  '@types/node': 14.17.10
   '@types/react': 17.0.18
   '@types/react-dom': 17.0.9
   '@typescript-eslint/eslint-plugin': 4.29.2
@@ -70,7 +70,7 @@ devDependencies:
   '@nrwl/workspace': 12.7.2_prettier@2.3.2+ts-node@10.2.0
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@types/jest': 27.0.1
-  '@types/node': 14.17.9
+  '@types/node': 14.17.10
   '@types/react': 17.0.18
   '@types/react-dom': 17.0.9
   '@typescript-eslint/eslint-plugin': 4.29.2_b01b7137116ac50f0745961d9cf72d34
@@ -89,7 +89,7 @@ devDependencies:
   pnpm: 6.0.2
   prettier: 2.3.2
   ts-jest: 27.0.5_10128d06e73975bf11c4611b081c51df
-  ts-node: 10.2.0_3cddbd81c3a53971a7cbc3c93cba6165
+  ts-node: 10.2.0_615e95850269123085c33084da6dfbad
   typescript: 4.3.5
 
 packages:
@@ -2736,6 +2736,10 @@ packages:
 
   /@types/node/12.12.50:
     resolution: {integrity: sha512-5ImO01Fb8YsEOYpV+aeyGYztcYcjGsBvN4D7G5r1ef2cuQOpymjWNQi5V0rKHE6PC2ru3HkoUr/Br2/8GUA84w==}
+    dev: true
+
+  /@types/node/14.17.10:
+    resolution: {integrity: sha512-09x2d6kNBwjHgyh3jOUE2GE4DFoxDriDvWdu6mFhMP1ysynGYazt4ecZmJlL6/fe4Zi2vtYvTvtL7epjQQrBhA==}
     dev: true
 
   /@types/node/14.17.3:
@@ -7791,7 +7795,7 @@ packages:
       jest-validate: 27.0.6
       micromatch: 4.0.4
       pretty-format: 27.0.6
-      ts-node: 10.2.0_3cddbd81c3a53971a7cbc3c93cba6165
+      ts-node: 10.2.0_615e95850269123085c33084da6dfbad
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -12341,7 +12345,7 @@ packages:
       typescript: 4.3.5
     dev: true
 
-  /ts-node/10.2.0_3cddbd81c3a53971a7cbc3c93cba6165:
+  /ts-node/10.2.0_615e95850269123085c33084da6dfbad:
     resolution: {integrity: sha512-FstYHtQz6isj8rBtYMN4bZdnXN1vq4HCbqn9vdNQcInRqtB86PePJQIxE6es0PhxKWhj2PHuwbG40H+bxkZPmg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -12361,7 +12365,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.2
-      '@types/node': 14.17.9
+      '@types/node': 14.17.10
       acorn: 8.4.1
       acorn-walk: 8.1.1
       arg: 4.1.3
