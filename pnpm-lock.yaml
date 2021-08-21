@@ -17,8 +17,8 @@ specifiers:
   '@nrwl/workspace': 12.7.2
   '@testing-library/react': 12.0.0
   '@types/jest': 27.0.1
-  '@types/node': 14.17.10
-  '@types/react': 17.0.18
+  '@types/node': 14.17.11
+  '@types/react': 17.0.19
   '@types/react-dom': 17.0.9
   '@typescript-eslint/eslint-plugin': 4.29.2
   '@typescript-eslint/parser': 4.29.2
@@ -30,7 +30,7 @@ specifiers:
   eslint: 7.32.0
   eslint-config-prettier: 8.3.0
   eslint-plugin-cypress: ^2.11.2
-  eslint-plugin-import: 2.24.0
+  eslint-plugin-import: 2.24.1
   eslint-plugin-jsx-a11y: 6.4.1
   eslint-plugin-react: 7.24.0
   eslint-plugin-react-hooks: 4.2.0
@@ -70,8 +70,8 @@ devDependencies:
   '@nrwl/workspace': 12.7.2_prettier@2.3.2+ts-node@10.2.0
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@types/jest': 27.0.1
-  '@types/node': 14.17.10
-  '@types/react': 17.0.18
+  '@types/node': 14.17.11
+  '@types/react': 17.0.19
   '@types/react-dom': 17.0.9
   '@typescript-eslint/eslint-plugin': 4.29.2_b01b7137116ac50f0745961d9cf72d34
   '@typescript-eslint/parser': 4.29.2_eslint@7.32.0+typescript@4.3.5
@@ -81,7 +81,7 @@ devDependencies:
   eslint: 7.32.0
   eslint-config-prettier: 8.3.0_eslint@7.32.0
   eslint-plugin-cypress: 2.11.2_eslint@7.32.0
-  eslint-plugin-import: 2.24.0_eslint@7.32.0
+  eslint-plugin-import: 2.24.1_eslint@7.32.0
   eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
   eslint-plugin-react: 7.24.0_eslint@7.32.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
@@ -89,7 +89,7 @@ devDependencies:
   pnpm: 6.0.2
   prettier: 2.3.2
   ts-jest: 27.0.5_10128d06e73975bf11c4611b081c51df
-  ts-node: 10.2.0_615e95850269123085c33084da6dfbad
+  ts-node: 10.2.0_a3da7f9f56afe7b98c9382c63365a60d
   typescript: 4.3.5
 
 packages:
@@ -2738,8 +2738,8 @@ packages:
     resolution: {integrity: sha512-5ImO01Fb8YsEOYpV+aeyGYztcYcjGsBvN4D7G5r1ef2cuQOpymjWNQi5V0rKHE6PC2ru3HkoUr/Br2/8GUA84w==}
     dev: true
 
-  /@types/node/14.17.10:
-    resolution: {integrity: sha512-09x2d6kNBwjHgyh3jOUE2GE4DFoxDriDvWdu6mFhMP1ysynGYazt4ecZmJlL6/fe4Zi2vtYvTvtL7epjQQrBhA==}
+  /@types/node/14.17.11:
+    resolution: {integrity: sha512-n2OQ+0Bz6WEsUjrvcHD1xZ8K+Kgo4cn9/w94s1bJS690QMUWfJPW/m7CCb7gPkA1fcYwL2UpjXP/rq/Eo41m6w==}
     dev: true
 
   /@types/node/14.17.3:
@@ -2792,8 +2792,8 @@ packages:
       csstype: 3.0.7
     dev: true
 
-  /@types/react/17.0.18:
-    resolution: {integrity: sha512-YTLgu7oS5zvSqq49X5Iue5oAbVGhgPc5Au29SJC4VeE17V6gASoOxVkUDy9pXFMRFxCWCD9fLeweNFizo3UzOg==}
+  /@types/react/17.0.19:
+    resolution: {integrity: sha512-sX1HisdB1/ZESixMTGnMxH9TDe8Sk709734fEQZzCV/4lSu9kJCPbo2PbTRoZM+53Pp0P10hYVyReUueGwUi4A==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
@@ -5688,6 +5688,13 @@ packages:
       resolve: 1.20.0
     dev: true
 
+  /eslint-import-resolver-node/0.3.6:
+    resolution: {integrity: sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==}
+    dependencies:
+      debug: 3.2.7
+      resolve: 1.20.0
+    dev: true
+
   /eslint-module-utils/2.6.2:
     resolution: {integrity: sha512-QG8pcgThYOuqxupd06oYTZoNOGaUdTY1PqK+oS6ElF6vs4pBdk/aYxFVQQXzcrAqp9m7cl7lb2ubazX+g16k2Q==}
     engines: {node: '>=4'}
@@ -5727,6 +5734,30 @@ packages:
       read-pkg-up: 3.0.0
       resolve: 1.20.0
       tsconfig-paths: 3.9.0
+    dev: true
+
+  /eslint-plugin-import/2.24.1_eslint@7.32.0:
+    resolution: {integrity: sha512-KSFWhNxPH8OGJwpRJJs+Z7I0a13E2iFQZJIvSnCu6KUs4qmgAm3xN9GYBCSoiGWmwA7gERZPXqYQjcoCROnYhQ==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
+    dependencies:
+      array-includes: 3.1.3
+      array.prototype.flat: 1.2.4
+      debug: 2.6.9
+      doctrine: 2.1.0
+      eslint: 7.32.0
+      eslint-import-resolver-node: 0.3.6
+      eslint-module-utils: 2.6.2
+      find-up: 2.1.0
+      has: 1.0.3
+      is-core-module: 2.6.0
+      minimatch: 3.0.4
+      object.values: 1.1.4
+      pkg-up: 2.0.0
+      read-pkg-up: 3.0.0
+      resolve: 1.20.0
+      tsconfig-paths: 3.10.1
     dev: true
 
   /eslint-plugin-jsx-a11y/6.4.1_eslint@7.32.0:
@@ -7345,6 +7376,12 @@ packages:
       has: 1.0.3
     dev: true
 
+  /is-core-module/2.6.0:
+    resolution: {integrity: sha512-wShG8vs60jKfPWpF2KZRaAtvt3a20OAn7+IJ6hLPECpSABLcKtFKTTI4ZtH5QcBruBHlq+WsdHWyz0BCZW7svQ==}
+    dependencies:
+      has: 1.0.3
+    dev: true
+
   /is-data-descriptor/0.1.4:
     resolution: {integrity: sha1-C17mSDiOLIYCgueT8YVv7D8wG1Y=}
     engines: {node: '>=0.10.0'}
@@ -7795,7 +7832,7 @@ packages:
       jest-validate: 27.0.6
       micromatch: 4.0.4
       pretty-format: 27.0.6
-      ts-node: 10.2.0_615e95850269123085c33084da6dfbad
+      ts-node: 10.2.0_a3da7f9f56afe7b98c9382c63365a60d
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -10934,7 +10971,7 @@ packages:
   /resolve/1.20.0:
     resolution: {integrity: sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==}
     dependencies:
-      is-core-module: 2.4.0
+      is-core-module: 2.6.0
       path-parse: 1.0.6
     dev: true
 
@@ -12345,7 +12382,7 @@ packages:
       typescript: 4.3.5
     dev: true
 
-  /ts-node/10.2.0_615e95850269123085c33084da6dfbad:
+  /ts-node/10.2.0_a3da7f9f56afe7b98c9382c63365a60d:
     resolution: {integrity: sha512-FstYHtQz6isj8rBtYMN4bZdnXN1vq4HCbqn9vdNQcInRqtB86PePJQIxE6es0PhxKWhj2PHuwbG40H+bxkZPmg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -12365,7 +12402,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.2
-      '@types/node': 14.17.10
+      '@types/node': 14.17.11
       acorn: 8.4.1
       acorn-walk: 8.1.1
       arg: 4.1.3
@@ -12382,6 +12419,14 @@ packages:
       chalk: 4.1.0
       enhanced-resolve: 5.8.2
       tsconfig-paths: 3.9.0
+    dev: true
+
+  /tsconfig-paths/3.10.1:
+    resolution: {integrity: sha512-rETidPDgCpltxF7MjBZlAFPUHv5aHH2MymyPvh+vEyWAED4Eb/WeMbsnD/JDr4OKPOA1TssDHgIcpTN5Kh0p6Q==}
+    dependencies:
+      json5: 2.2.0
+      minimist: 1.2.5
+      strip-bom: 3.0.0
     dev: true
 
   /tsconfig-paths/3.9.0:
