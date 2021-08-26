@@ -17,7 +17,7 @@ specifiers:
   '@nrwl/workspace': 12.7.2
   '@testing-library/react': 12.0.0
   '@types/jest': 27.0.1
-  '@types/node': 14.17.11
+  '@types/node': 14.17.12
   '@types/react': 17.0.19
   '@types/react-dom': 17.0.9
   '@typescript-eslint/eslint-plugin': 4.29.3
@@ -70,7 +70,7 @@ devDependencies:
   '@nrwl/workspace': 12.7.2_prettier@2.3.2+ts-node@10.2.0
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
   '@types/jest': 27.0.1
-  '@types/node': 14.17.11
+  '@types/node': 14.17.12
   '@types/react': 17.0.19
   '@types/react-dom': 17.0.9
   '@typescript-eslint/eslint-plugin': 4.29.3_fd14c0002fbbfb85b8a0070d0dffb93d
@@ -89,7 +89,7 @@ devDependencies:
   pnpm: 6.0.2
   prettier: 2.3.2
   ts-jest: 27.0.5_10128d06e73975bf11c4611b081c51df
-  ts-node: 10.2.0_a3da7f9f56afe7b98c9382c63365a60d
+  ts-node: 10.2.0_42624621719c4de9ef5c4684becb9404
   typescript: 4.3.5
 
 packages:
@@ -2738,8 +2738,8 @@ packages:
     resolution: {integrity: sha512-5ImO01Fb8YsEOYpV+aeyGYztcYcjGsBvN4D7G5r1ef2cuQOpymjWNQi5V0rKHE6PC2ru3HkoUr/Br2/8GUA84w==}
     dev: true
 
-  /@types/node/14.17.11:
-    resolution: {integrity: sha512-n2OQ+0Bz6WEsUjrvcHD1xZ8K+Kgo4cn9/w94s1bJS690QMUWfJPW/m7CCb7gPkA1fcYwL2UpjXP/rq/Eo41m6w==}
+  /@types/node/14.17.12:
+    resolution: {integrity: sha512-vhUqgjJR1qxwTWV5Ps5txuy2XMdf7Fw+OrdChRboy8BmWUPkckOhphaohzFG6b8DW7CrxaBMdrdJ47SYFq1okw==}
     dev: true
 
   /@types/node/14.17.3:
@@ -7832,7 +7832,7 @@ packages:
       jest-validate: 27.0.6
       micromatch: 4.0.4
       pretty-format: 27.0.6
-      ts-node: 10.2.0_a3da7f9f56afe7b98c9382c63365a60d
+      ts-node: 10.2.0_42624621719c4de9ef5c4684becb9404
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -12382,7 +12382,7 @@ packages:
       typescript: 4.3.5
     dev: true
 
-  /ts-node/10.2.0_a3da7f9f56afe7b98c9382c63365a60d:
+  /ts-node/10.2.0_42624621719c4de9ef5c4684becb9404:
     resolution: {integrity: sha512-FstYHtQz6isj8rBtYMN4bZdnXN1vq4HCbqn9vdNQcInRqtB86PePJQIxE6es0PhxKWhj2PHuwbG40H+bxkZPmg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -12402,7 +12402,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.2
-      '@types/node': 14.17.11
+      '@types/node': 14.17.12
       acorn: 8.4.1
       acorn-walk: 8.1.1
       arg: 4.1.3
