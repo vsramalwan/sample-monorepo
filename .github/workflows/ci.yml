@@ -30,7 +30,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -65,7 +65,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -102,7 +102,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -137,7 +137,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
