@@ -12,7 +12,7 @@ jobs:
       run: git remote set-url --push origin https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
 
     - name: Setup Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2.5.0
       with:
         node-version: 14
 
