@@ -16,11 +16,11 @@ jobs:
         os: [ ubuntu-latest ]
     steps:
       - name: checkout code repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
       - name: Cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
