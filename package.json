@@ -37,7 +37,6 @@
     "ci:build": "pnpm run build -r",
     "ci:publish": "pnpm run build -r && pnpm publish"
   },
-  "private": true,
   "dependencies": {
     "core-js": "^3.10.1",
     "document-register-element": "1.14.10",
