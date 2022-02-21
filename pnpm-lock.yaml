@@ -35,7 +35,7 @@ specifiers:
   eslint-plugin-react: 7.24.0
   eslint-plugin-react-hooks: 4.2.0
   jest: 27.0.6
-  pnpm: ^6.0.2
+  pnpm: ^6.31.0
   prettier: 2.3.2
   react: 17.0.2
   react-dom: 17.0.2
@@ -86,7 +86,7 @@ devDependencies:
   eslint-plugin-react: 7.24.0_eslint@7.32.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
   jest: 27.0.6_ts-node@10.2.0
-  pnpm: 6.0.2
+  pnpm: 6.31.0
   prettier: 2.3.2
   ts-jest: 27.0.5_10128d06e73975bf11c4611b081c51df
   ts-node: 10.2.0_42624621719c4de9ef5c4684becb9404
@@ -9952,8 +9952,8 @@ packages:
       find-up: 2.1.0
     dev: true
 
-  /pnpm/6.0.2:
-    resolution: {integrity: sha512-Zg1wbTjGu2dcQKzKq4IZSshK6zIEedEvlmE/EpujnFcbzJHXCAuyHZR2GuhR1887qc41dHs/bxnXEOol2/sapQ==}
+  /pnpm/6.31.0:
+    resolution: {integrity: sha512-YUCyLI2J2wQsHWgcRYR8wUrTWsE0E8GX46XKtdXcUiE0GJJYi5saRy2Y8BMfLtlDHshHLs2U/KO1e5gsftJTFA==}
     engines: {node: '>=12.17'}
     hasBin: true
     dev: true
