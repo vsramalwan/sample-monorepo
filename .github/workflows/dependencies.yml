@@ -39,8 +39,7 @@ jobs:
       - name: Update Dependencies
         run: |
           npx npm-check-updates --upgrade --packageFile package.json
-          pnpm install
-          pnpm update
+          npx pnpm install --lockfile-only
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
