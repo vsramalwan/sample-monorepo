@@ -1,44 +1,48 @@
+name: dependencies
+
 on:
   workflow_dispatch: {}
-name: Update dependencies
+  schedule:
+    # "At 06:00 on Tuesday" UTC
+    # i.e. 7 am CET or 8 am CEST
+    # https://crontab.guru/#0_6_*_*_2
+    - cron: 0 6 * * 2
+
 jobs:
-  package-update:
+  update:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
-
-    - name: set remote url
-      run: git remote set-url --push origin https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-
-    - name: Setup Node
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
-
-    - name: Cache pnpm modules
-      uses: actions/cache@v2
-      with:
-        path: ~/.pnpm-store
-        key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-
-
-    - name: Install pnpm and dependencies
-      uses: pnpm/action-setup@v2.0.1
-      with:
-        version: 6.11.5
-        run_install: |
-          args: [--frozen-lockfile]
-
-    - name: package-update
-      uses: vsramalwan/actions-package-update@eb5a57c43b045de109df8de4ec80373e37ed1ce1
-      env:
-        AUTHOR_EMAIL: john@example.com
-        AUTHOR_NAME: john
-        EXECUTE: "true"
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        LOG_LEVEL: debug
-        UPDATE_COMMAND: pnpm
-      with:
-        args: update
+      - name: Checkout repository
+        uses: actions/checkout@v2.4.0
+        with:
+          ref: main
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Update Dependencies
+        run: |
+          pnpm install
+          npx npm-check-updates --upgrade --packageFile package.json
+          pnpm install
+          pnpm update
+      - name: Create Pull Request
+        with:
+          committer: GitHub Actions <actions@github.com>
+          commit-message: "chore(deps): update all 🚀"
+          title: "chore(deps): update all 🚀"
+          author: GitHub Actions <actions@github.com>
+          branch: chore/update-dependencies
+          branch-suffix: timestamp
+        uses: peter-evans/create-pull-request@v3.12.1

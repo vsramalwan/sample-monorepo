@@ -12,25 +12,20 @@ on:
 
 jobs:
   pnpmstore:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        node: [ 14 ]
-        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/setup-node@v2.4.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 14
 
       - name: checkout code repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
+          ref: main
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -38,9 +33,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          version: 6.0.2
+          version: 6.31.0
           run_install: |
             args: [--frozen-lockfile]
       - name: check pnpm store
@@ -50,22 +45,19 @@ jobs:
   lint:
     needs: pnpmstore
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: [ 14 ]
-        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2.4.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 14
 
       - name: checkout code repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
+          ref: main
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -73,9 +65,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          version: 6.0.2
+          version: 6.31.0
           run_install: |
             args: [--frozen-lockfile]
       - name: build
@@ -86,23 +78,19 @@ jobs:
   test:
     needs: pnpmstore
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        node: [ 14 ]
-        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2.4.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 14
 
       - name: checkout code repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
+          ref: main
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -110,9 +98,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          version: 6.0.2
+          version: 6.31.0
           run_install: |
             args: [--frozen-lockfile]
       - name: Install and run test
@@ -122,22 +110,19 @@ jobs:
 
   build:
     needs: pnpmstore
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: [ 14 ]
-        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2.4.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 14
 
       - name: checkout code repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
+          ref: main
       - name: cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -145,9 +130,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          version: 6.0.2
+          version: 6.31.0
           run_install: |
             args: [--frozen-lockfile]
       - name: build

@@ -8,19 +8,25 @@ env:
 
 jobs:
   release:
-    name: Release
     timeout-minutes: 15
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
     steps:
       - name: checkout code repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
+          ref: main
+      # The following step creates a .npmrc file on the runner with following contents:
+      # //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+      # registry=https://npm.pkg.github.com/
+      # always-auth=true
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: "https://npm.pkg.github.com"
       - name: Cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -28,25 +34,11 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.1.0
         with:
-          version: 6.0.2
+          version: 6.31.0
           run_install: |
             args: [--frozen-lockfile]
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
+      - run: pnpm ci:publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@master
-        with:
-          version: pnpm ci:version
-          publish: pnpm ci:publish
-          commit: 'chore: update versions'
-          title: 'chore: update versions'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
