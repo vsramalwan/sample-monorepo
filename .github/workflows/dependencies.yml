@@ -31,9 +31,13 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.31.0
+          run_install: |
+            args: [--frozen-lockfile]
       - name: Update Dependencies
         run: |
-          pnpm install
           npx npm-check-updates --upgrade --packageFile package.json
           pnpm install
           pnpm update
