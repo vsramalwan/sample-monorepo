@@ -8,8 +8,8 @@ describe('Footer', () => {
     const { baseElement } = render(<Footer />);
     expect(baseElement).toBeTruthy();
   });
-  it('should display footer', ()=>{
-    const {getByText}=render(<Footer />)
-    expect(getByText('This is footer!')).toBeTruthy()
-  })
+  it('should display footer', () => {
+    const { getByText } = render(<Footer />);
+    expect(getByText('This is footer!')).toBeTruthy();
+  });
 });
