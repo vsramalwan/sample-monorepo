@@ -1,14 +1,5 @@
 {
   "version": 2,
-  "cli": { "defaultCollection": "@nrwl/react" },
-  "defaultProject": "page",
-  "generators": {
-    "@nrwl/react": {
-      "application": { "style": "css", "linter": "eslint", "babel": true },
-      "component": { "style": "css" },
-      "library": { "style": "css", "linter": "eslint" }
-    }
-  },
   "projects": {
     "page": {
       "root": "apps/page",
@@ -56,14 +47,20 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": { "buildTarget": "page:build" },
+          "options": {
+            "buildTarget": "page:build"
+          },
           "configurations": {
-            "production": { "buildTarget": "page:build:production" }
+            "production": {
+              "buildTarget": "page:build:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["apps/page/**/*.{ts,tsx,js,jsx}"] }
+          "options": {
+            "lintFilePatterns": ["apps/page/**/*.{ts,tsx,js,jsx}"]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -88,12 +85,16 @@
             "devServerTarget": "page:serve"
           },
           "configurations": {
-            "production": { "devServerTarget": "page:serve:production" }
+            "production": {
+              "devServerTarget": "page:serve:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["apps/page-e2e/**/*.{js,ts}"] }
+          "options": {
+            "lintFilePatterns": ["apps/page-e2e/**/*.{js,ts}"]
+          }
         }
       }
     },
