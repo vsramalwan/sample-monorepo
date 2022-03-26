@@ -1,10 +1,28 @@
 name: Release
 on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: tag or sha to release
+        required: true
+        default: main
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - 'docs/**'
+    workflow_run:
+        workflows: ['ci']
+        types:
+            - completed
+        branches:
+            - main
 env:
   pnpm_store_path: ${{github.workspace}}/.pnpm-store
+
+concurrency: release
 
 jobs:
   release:
@@ -42,3 +60,5 @@ jobs:
       - run: pnpm ci:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: pnpm release
+      - run: git push --follow-tags
