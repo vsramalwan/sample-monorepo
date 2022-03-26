@@ -33,9 +33,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.1.0
+      - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.1
+          version: 6.32.3
           run_install: |
             args: [--frozen-lockfile]
       - name: check pnpm store
@@ -65,9 +65,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.1.0
+      - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.1
+          version: 6.32.3
           run_install: |
             args: [--frozen-lockfile]
       - name: build
@@ -98,9 +98,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.1.0
+      - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.1
+          version: 6.32.3
           run_install: |
             args: [--frozen-lockfile]
       - name: Install and run test
@@ -130,9 +130,9 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.1.0
+      - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.1
+          version: 6.32.3
           run_install: |
             args: [--frozen-lockfile]
       - name: build
