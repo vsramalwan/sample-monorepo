@@ -57,12 +57,11 @@ jobs:
           version: 6.32.3
           run_install: |
             args: [--frozen-lockfile]
-      # FIXME: npm publish
-      # - run: pnpm ci:publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           git config user.email "GitHub Actions <actions@github.com>"
           git config user.name "GitHub Actions"
       - run: pnpm release
       - run: git push --follow-tags
+      - run: pnpm ci:publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
