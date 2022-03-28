@@ -1,4 +1,13 @@
-# sample-monorepo
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.4.1](https://github.com/vsramalwan/sample-monorepo/compare/v0.4.0...v0.4.1) (2022-03-28)
+
+
+### Features
+
+* ignore files ([63ea148](https://github.com/vsramalwan/sample-monorepo/commit/63ea14898d1c893f96501838497698a085631f5f))
 
 ## 0.2.0
 
