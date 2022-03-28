@@ -1,0 +1,47 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-gpr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: checkout code repository
+        uses: actions/checkout@v2.4.0
+        with:
+          fetch-depth: 0
+          ref: main
+      # The following step creates a .npmrc file on the runner with following contents:
+      # //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+      # registry=https://npm.pkg.github.com/
+      # always-auth=true
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: 'https://npm.pkg.github.com'
+      - name: Cache pnpm modules
+        uses: actions/cache@v2.1.7
+        env:
+          cache-name: cache-pnpm-modules
+        with:
+          path: ${{ env.pnpm_store_path }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+      - uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 6.32.3
+          run_install: |
+            args: [--frozen-lockfile]
+      - run: pnpm ci:publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
