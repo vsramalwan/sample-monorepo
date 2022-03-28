@@ -62,6 +62,3 @@ jobs:
           git config user.name "GitHub Actions"
       - run: pnpm release
       - run: git push --follow-tags
-      - run: pnpm ci:publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
