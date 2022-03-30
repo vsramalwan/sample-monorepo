@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Get Tag
+      id: vars
+      run: echo ::set-output name=tag::${git describe --abbrev=0}
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:${{ steps.vars.outputs.tag }}
