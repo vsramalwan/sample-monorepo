@@ -4,11 +4,11 @@ FROM node:17
 RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
 RUN mkdir /app
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm fetch --prod
 COPY . .
-RUN pnpm install
-
 WORKDIR /app
-EXPOSE 4200
+
+RUN pnpm install
 RUN pnpm run build
+
+EXPOSE 4200
 CMD ["pnpm", "start"]
