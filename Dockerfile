@@ -6,7 +6,7 @@ RUN mkdir /app
 COPY pnpm-lock.yaml ./
 RUN pnpm fetch --prod
 COPY . .
-RUN pnpm install -r --offline --prod
+RUN pnpm install
 
 WORKDIR /app
 EXPOSE 4200
