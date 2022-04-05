@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.8](https://github.com/vsramalwan/sample-monorepo/compare/0.4.7...0.4.8) (2022-04-05)
+
+
+### Bug Fixes
+
+* nx command not found ([e3d996d](https://github.com/vsramalwan/sample-monorepo/commit/e3d996dee6c9f8259a47729005249f6fc5c657b5))
+
 ### [0.4.7](https://github.com/vsramalwan/sample-monorepo/compare/0.4.6...0.4.7) (2022-04-05)
 
 
