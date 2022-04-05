@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.6](https://github.com/vsramalwan/sample-monorepo/compare/0.4.5...0.4.6) (2022-04-05)
+
+
+### Features
+
+* docker ([e838bc7](https://github.com/vsramalwan/sample-monorepo/commit/e838bc7189fa571dbe516fe308f25f349a68ae0c))
+
 ### [0.4.5](https://github.com/vsramalwan/sample-monorepo/compare/0.4.4...0.4.5) (2022-04-05)
 
 ### [0.4.4](https://github.com/vsramalwan/sample-monorepo/compare/0.4.3...0.4.4) (2022-03-30)
