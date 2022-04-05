@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.9](https://github.com/vsramalwan/sample-monorepo/compare/0.4.8...0.4.9) (2022-04-05)
+
+
+### Bug Fixes
+
+* build command ([bd8b748](https://github.com/vsramalwan/sample-monorepo/commit/bd8b74801b19389cdd619d92119e0fa6bd1fecc8))
+
 ### [0.4.8](https://github.com/vsramalwan/sample-monorepo/compare/0.4.7...0.4.8) (2022-04-05)
 
 
