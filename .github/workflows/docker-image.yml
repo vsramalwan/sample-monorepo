@@ -11,8 +11,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Get Tag
-      id: vars
-      run: echo ::set-output name=tag::${git describe --abbrev=0}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag sample-monorepo:${{ steps.vars.outputs.tag }}
+      run: docker build . --file Dockerfile --tag sample-monorepo:${{ github.ref_name }}
