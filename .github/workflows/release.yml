@@ -14,7 +14,7 @@ on:
       - 'CHANGELOG.md'
       - 'docs/**'
     workflow_run:
-        workflows: ['ci']
+        workflows: ['ci', 'docker-image']
         types:
             - completed
         branches:
