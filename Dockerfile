@@ -7,6 +7,7 @@ COPY package.json pnpm-lock.yaml ./
 WORKDIR /app
 EXPOSE 4200
 
+RUN rm -rf node_modules
 RUN pnpm install --frozen-lockfile
 RUN pnpm install -g nx
 COPY . .
