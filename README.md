@@ -1,5 +1,4 @@
-[![Release](https://github.com/vsramalwan/sample-monorepo/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/vsramalwan/sample-monorepo/actions/workflows/release.yml) [![CI](https://github.com/vsramalwan/sample-monorepo/actions/workflows/ci.yml/badge.svg)](https://github.com/vsramalwan/sample-monorepo/actions/workflows/ci.yml) [![Docker Status](https://github.com/vsramalwan/sample-monorepo/actions/workflows/docker-image.yml/badge.svg)](https://github.com/vsramalwan/sample-monorepo/actions/workflows/docker-image.yml)
-[![Docker Cloud BuildStatus](https://img.shields.io/docker/cloud/build/vsramalwan/sample-monorepo)]
+[![Release](https://github.com/vsramalwan/sample-monorepo/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/vsramalwan/sample-monorepo/actions/workflows/release.yml) [![CI](https://github.com/vsramalwan/sample-monorepo/actions/workflows/ci.yml/badge.svg)](https://github.com/vsramalwan/sample-monorepo/actions/workflows/ci.yml) [![Docker Image CI](https://github.com/vsramalwan/sample-monorepo/actions/workflows/docker-image.yml/badge.svg)](https://github.com/vsramalwan/sample-monorepo/actions/workflows/docker-image.yml)
 
 # Sample Monorepo
 
