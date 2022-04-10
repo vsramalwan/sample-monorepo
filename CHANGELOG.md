@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.12](https://github.com/vsramalwan/sample-monorepo/compare/0.4.11...0.4.12) (2022-04-10)
+
+
+### Features
+
+* push image to docker hub ([9f75b65](https://github.com/vsramalwan/sample-monorepo/commit/9f75b65869576af741bac0670e592c1a4a6bfd32))
+
 ### [0.4.11](https://github.com/vsramalwan/sample-monorepo/compare/0.4.10...0.4.11) (2022-04-10)
 
 ### [0.4.10](https://github.com/vsramalwan/sample-monorepo/compare/0.4.9...0.4.10) (2022-04-10)
