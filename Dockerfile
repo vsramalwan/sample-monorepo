@@ -8,6 +8,6 @@ COPY package.json pnpm-lock.yaml ./
 EXPOSE 4200
 
 RUN pnpm install --frozen-lockfile
-COPY . /app/
+COPY . .
 RUN pnpm run build
 CMD ["pnpm", "start"]
