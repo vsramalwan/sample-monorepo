@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.13](https://github.com/vsramalwan/sample-monorepo/compare/0.4.12...0.4.13) (2022-04-12)
+
+
+### Features
+
+* run ci on prs ([6617124](https://github.com/vsramalwan/sample-monorepo/commit/6617124c3f1e6cf045fb9ea203388122497f8d17))
+
 ### [0.4.12](https://github.com/vsramalwan/sample-monorepo/compare/0.4.11...0.4.12) (2022-04-10)
 
 
