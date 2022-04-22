@@ -49,6 +49,7 @@ specifiers:
   ts-node: ~10.7.0
   tslib: ^2.3.1
   typescript: 4.6.3
+  typescript-eslint-prettier-config: ^1.3.3
   webpack: ^5.72.0
 
 dependencies:
@@ -102,6 +103,7 @@ devDependencies:
   ts-jest: 27.1.4_e5fb0852f9419ae84240799a2f4ee178
   ts-node: 10.7.0_de7c86b0cde507c63a0402da5b982bd3
   typescript: 4.6.3
+  typescript-eslint-prettier-config: 1.3.3_f11458f3b5a9aac7eb7b6e83671a32b3
   webpack: 5.72.0
 
 packages:
@@ -11117,6 +11119,18 @@ packages:
 
   /typedarray/0.0.6:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
+    dev: true
+
+  /typescript-eslint-prettier-config/1.3.3_f11458f3b5a9aac7eb7b6e83671a32b3:
+    resolution: {integrity: sha512-HLaO+zBVUzmMAUPkd35b6OkIypFQqCWzkUhWc5ZqGQuSn1dkcn4CX47Rq4eFuzCP0x4Mt3/o+H1UmA61Pug5rA==}
+    peerDependencies:
+      eslint: ^8.13.0
+      prettier: ^2.6.2
+      typescript: ^4.6.3
+    dependencies:
+      eslint: 8.13.0
+      prettier: 2.6.2
+      typescript: 4.6.3
     dev: true
 
   /typescript/4.6.3:
