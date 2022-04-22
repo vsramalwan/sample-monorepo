@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.16](https://github.com/vsramalwan/sample-monorepo/compare/0.4.15...0.4.16) (2022-04-22)
+
+
+### Features
+
+* use typescript-eslint-prettier-config ([#174](https://github.com/vsramalwan/sample-monorepo/issues/174)) ([10cad56](https://github.com/vsramalwan/sample-monorepo/commit/10cad566bbdc53ed19cfd6f5b5f18a1ef7316e40))
+
 ### [0.4.15](https://github.com/vsramalwan/sample-monorepo/compare/0.4.14...0.4.15) (2022-04-21)
 
 ### [0.4.14](https://github.com/vsramalwan/sample-monorepo/compare/0.4.13...0.4.14) (2022-04-12)
