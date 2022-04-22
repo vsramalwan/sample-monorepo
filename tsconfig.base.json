@@ -1,4 +1,5 @@
 {
+  "extends": "./node_modules/typescript-eslint-prettier-config/tsconfig.json",
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
