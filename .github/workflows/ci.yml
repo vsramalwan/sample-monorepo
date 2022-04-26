@@ -42,7 +42,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.3
+          version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
       - name: check pnpm store
@@ -74,7 +74,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.3
+          version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
       - name: build
@@ -107,7 +107,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.3
+          version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
       - name: Install and run test
@@ -139,7 +139,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.3
+          version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
       - name: build

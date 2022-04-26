@@ -33,7 +33,7 @@ jobs:
             ${{ runner.os }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.3
+          version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
       - name: Update Dependencies
