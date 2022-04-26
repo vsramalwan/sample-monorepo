@@ -14,11 +14,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3
         with:
           ref: main
       - name: Use Node.js 14
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 14
       - name: Get yarn cache directory path
@@ -33,7 +33,7 @@ jobs:
             ${{ runner.os }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.3
+          version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
       - name: Update Dependencies

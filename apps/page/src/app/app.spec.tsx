@@ -1,18 +1,18 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-
-import App from './app';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { render } from '@testing-library/react'
+import React from 'react'
+import App from './app'
 
 describe('App', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<App />);
+    it('should render successfully', () => {
+        const { baseElement } = render(<App />)
 
-    expect(baseElement).toBeTruthy();
-  });
+        expect(baseElement).toBeTruthy()
+    })
 
-  it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
+    it('should have a greeting as the title', () => {
+        const { getByText } = render(<App />)
 
-    expect(getByText('This is a Page!')).toBeTruthy();
-  });
-});
+        expect(getByText('This is a Page!')).toBeTruthy()
+    })
+})

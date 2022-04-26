@@ -15,7 +15,7 @@ jobs:
       packages: write
     steps:
       - name: checkout code repository
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
@@ -24,12 +24,12 @@ jobs:
       # registry=https://npm.pkg.github.com/
       # always-auth=true
       - name: Use Node.js 14
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com'
       - name: Cache pnpm modules
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         env:
           cache-name: cache-pnpm-modules
         with:
@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.32.3
+          version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
       - run: pnpm ci:publish

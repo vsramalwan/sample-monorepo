@@ -25,12 +25,18 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "rules": {
+        "import/extensions": "off",
+        "import/prefer-default-export": "warn"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
-      "rules": {}
+      "rules": {
+        "import/extensions": "off",
+        "import/prefer-default-export": "warn"
+      }
     }
   ]
 }
