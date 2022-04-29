@@ -3,7 +3,7 @@ jobs:
   flush:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: /tmp/flush
           key: ${{ github.run_id }}-${{ github.run_attempt }}
