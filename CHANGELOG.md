@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.19](https://github.com/vsramalwan/sample-monorepo/compare/0.4.18...0.4.19) (2022-04-29)
+
+
+### Bug Fixes
+
+* jest tests [release skip] [ci skip] ([#179](https://github.com/vsramalwan/sample-monorepo/issues/179)) ([87fe9f9](https://github.com/vsramalwan/sample-monorepo/commit/87fe9f97f3119b63fe091b65e431d9070f575e5a))
+
 ### [0.4.18](https://github.com/vsramalwan/sample-monorepo/compare/0.4.17...0.4.18) (2022-04-29)
 
 ### [0.4.17](https://github.com/vsramalwan/sample-monorepo/compare/0.4.16...0.4.17) (2022-04-26)
