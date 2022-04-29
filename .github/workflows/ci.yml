@@ -112,7 +112,6 @@ jobs:
             args: [--frozen-lockfile]
       - name: Install and run test
         run: |
-          pnpm install
           pnpm test
 
   build:
