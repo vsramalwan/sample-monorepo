@@ -22,11 +22,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-          cache: 'pnpm'
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
@@ -37,6 +32,10 @@ jobs:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: check pnpm store
         if: steps.pnpm-store.outputs.cache-hit != 'true'
         run: pnpm store status
@@ -46,11 +45,6 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-          cache: 'pnpm'
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
@@ -61,6 +55,10 @@ jobs:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: build
         run: pnpm run ci:build
       - name: lint
@@ -71,11 +69,6 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-          cache: 'pnpm'
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
@@ -86,6 +79,10 @@ jobs:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: Install and run test
         run: |
           pnpm install
@@ -95,11 +92,6 @@ jobs:
     needs: pnpmstore
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-          cache: 'pnpm'
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
@@ -110,5 +102,9 @@ jobs:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: build
         run: pnpm run build
