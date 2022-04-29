@@ -45,13 +45,9 @@ jobs:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
-      - run: |
-          pnpm store prune
-          pnpm install --frozen-lockfile
       - name: check pnpm store
         if: steps.pnpm-store.outputs.cache-hit != 'true'
-        run: |
-          pnpm store status
+        run: pnpm store status
 
   lint:
     needs: pnpmstore
@@ -116,6 +112,7 @@ jobs:
             args: [--frozen-lockfile]
       - name: Install and run test
         run: |
+          pnpm install
           pnpm test
 
   build:
