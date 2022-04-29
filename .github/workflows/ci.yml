@@ -25,21 +25,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
+          cache: 'pnpm'
 
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
@@ -57,21 +49,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
+          cache: 'pnpm'
 
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
@@ -90,21 +74,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
+          cache: 'pnpm'
 
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
@@ -122,21 +98,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
+          cache: 'pnpm'
 
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
