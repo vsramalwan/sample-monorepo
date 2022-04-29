@@ -19,6 +19,11 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
+      - uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 6.32.10
+          run_install: |
+            args: [--frozen-lockfile]
       # The following step creates a .npmrc file on the runner with following contents:
       # //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
       # registry=https://npm.pkg.github.com/
@@ -28,20 +33,7 @@ jobs:
         with:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com'
-      - name: Cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-      - uses: pnpm/action-setup@v2.2.1
-        with:
-          version: 6.32.10
-          run_install: |
-            args: [--frozen-lockfile]
+          cache: 'pnpm'
       - run: pnpm ci:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
