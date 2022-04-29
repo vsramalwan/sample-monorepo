@@ -22,29 +22,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: check pnpm store
         if: steps.pnpm-store.outputs.cache-hit != 'true'
         run: pnpm store status
@@ -54,29 +44,19 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: build
         run: pnpm run ci:build
       - name: lint
@@ -87,29 +67,19 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: Install and run test
         run: |
           pnpm install
@@ -119,28 +89,18 @@ jobs:
     needs: pnpmstore
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
       - name: checkout code repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: main
-      - name: cache pnpm modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-pnpm-modules
-        with:
-          path: ${{ env.pnpm_store_path }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
       - uses: pnpm/action-setup@v2.2.1
         with:
           version: 6.32.10
           run_install: |
             args: [--frozen-lockfile]
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'pnpm'
       - name: build
         run: pnpm run build
