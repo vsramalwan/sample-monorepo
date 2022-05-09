@@ -38,4 +38,4 @@ jobs:
           author: GitHub Actions <actions@github.com>
           branch: chore/update-dependencies
           branch-suffix: timestamp
-        uses: peter-evans/create-pull-request@v4.0.2
+        uses: peter-evans/create-pull-request@v4.0.3
