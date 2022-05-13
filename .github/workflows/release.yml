@@ -6,12 +6,6 @@ on:
         description: tag or sha to release
         required: true
         default: main
-  workflow_run:
-        workflows: ['ci', 'docker-image']
-        types:
-            - completed
-        branches:
-            - main
 env:
   pnpm_store_path: ${{github.workspace}}/.pnpm-store
 
