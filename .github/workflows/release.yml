@@ -6,14 +6,7 @@ on:
         description: tag or sha to release
         required: true
         default: main
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - 'docs/**'
-    workflow_run:
+  workflow_run:
         workflows: ['ci', 'docker-image']
         types:
             - completed
@@ -51,7 +44,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
       - run: |
-          git config user.email "GitHub Actions <actions@github.com>"
-          git config user.name "GitHub Actions"
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
       - run: pnpm release
       - run: git push --follow-tags
