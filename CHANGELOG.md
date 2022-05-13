@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.23](https://github.com/vsramalwan/sample-monorepo/compare/0.4.22...0.4.23) (2022-05-13)
+
+
+### Features
+
+* docker on release event  [release skip] [ci skip] ([c04361e](https://github.com/vsramalwan/sample-monorepo/commit/c04361e695f5b97a32eb0a34dbccad38e701eef7))
+
+
+### Bug Fixes
+
+* do not run on push [release skip] [ci skip] ([bcfab73](https://github.com/vsramalwan/sample-monorepo/commit/bcfab738603753d30b154bc787f53c2886143ea8))
+
+### [0.4.22](https://github.com/vsramalwan/sample-monorepo/compare/0.4.21...0.4.22) (2022-05-12)
+
 ### [0.4.21](https://github.com/vsramalwan/sample-monorepo/compare/0.4.20...0.4.21) (2022-04-29)
 
 ### [0.4.20](https://github.com/vsramalwan/sample-monorepo/compare/0.4.19...0.4.20) (2022-04-29)

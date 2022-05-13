@@ -1,0 +1,19 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-release
+    authors:
+      - actions-user
+      - dependabot[bot]
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - semver-version-major
+        - breaking-change
+    - title: New Features 🎉
+      labels:
+        - semver-version-minor
+        - enhancement
+    - title: Miscellaneous Changes
+      labels:
+        - "*"
