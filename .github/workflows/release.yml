@@ -59,4 +59,5 @@ jobs:
           title: 'chore(release): 1.1.1 [ci skip] 🚀'
           author: GitHub Actions <actions@github.com>
           branch: chore/release
+          base: main
         uses: peter-evans/create-pull-request@v4.0.4
