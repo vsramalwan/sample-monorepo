@@ -51,7 +51,9 @@ jobs:
           git config --local user.email "actions@github.com"
           git checkout -b chore/release
           pnpm release
-          git push --follow-tags --set-upstream origin chore/release
+      # get the last pushed tag and output it
+      - run: |
+          echo "LATEST_TAG=$(git tag --sort=taggerdate | tail -1)" >> $GITHUB_ENV
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
@@ -61,3 +63,8 @@ jobs:
           branch: chore/release
           base: main
         uses: peter-evans/create-pull-request@v4.0.4
+      # auto-approve and auto-merge this PR
+
+      # push tags only when PR auto-approved and auto-merged
+      - run: |
+          git push --follow-tags --set-upstream origin chore/release
