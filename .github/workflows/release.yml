@@ -9,8 +9,6 @@ on:
 env:
   pnpm_store_path: ${{github.workspace}}/.pnpm-store
 
-concurrency: release
-
 jobs:
   release:
     if: "!contains(github.event.head_commit.message, '[release skip]')"
@@ -37,17 +35,14 @@ jobs:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
-      - run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-      - run: pnpm release
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
-          commit-message: 'chore(deps): update all 🚀'
-          title: 'chore(deps): update all 🚀'
+          commit-message: 'chore(release): 1.1.1 [ci skip] 🚀'
+          title: 'chore(release): 1.1.1 [ci skip] 🚀'
           author: GitHub Actions <actions@github.com>
-          branch: chore/update-dependencies
+          branch: chore/release
           branch-suffix: timestamp
         uses: peter-evans/create-pull-request@v4.0.4
+      - run: pnpm release
       - run: git push --follow-tags
