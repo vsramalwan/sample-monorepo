@@ -42,15 +42,16 @@ jobs:
       # 1. Generate current Timestamp to suffix branch names
       # 2. git push tags to the created branch
       # 3. Create PR using branch from step #2
+      # 4. get the latest tag (or tag from last commit) and set this tag as PR title
       - run: |
-          echo "${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}"
+          echo "${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}" >> $GITHUB_ENV
       - name: step2
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
-          git checkout -b chore/release-`${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}`
+          git checkout -b chore/release-${env.CURRENT_TIMESTAMP}
           pnpm release
-          git push --follow-tags --set-upstream origin chore/release-`${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}`
+          git push --follow-tags --set-upstream origin chore/release-${env.CURRENT_TIMESTAMP}
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
