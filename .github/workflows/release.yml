@@ -22,7 +22,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-      - uses: pnpm/action-setup@v2.2.1
+      - uses: pnpm/action-setup@v2.2.2
         with:
           version: 6.32.10
           run_install: |
@@ -41,4 +41,13 @@ jobs:
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
       - run: pnpm release
+      - name: Create Pull Request
+        with:
+          committer: GitHub Actions <actions@github.com>
+          commit-message: 'chore(deps): update all 🚀'
+          title: 'chore(deps): update all 🚀'
+          author: GitHub Actions <actions@github.com>
+          branch: chore/update-dependencies
+          branch-suffix: timestamp
+        uses: peter-evans/create-pull-request@v4.0.4
       - run: git push --follow-tags
