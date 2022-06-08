@@ -35,6 +35,10 @@ jobs:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
+      - id: branchsuffix
+        run: |
+          echo '::set-output name=CURRENT_TIMESTAMP::date +%s'
+          # echo "action_state=yellow" >> $GITHUB_ENV
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
@@ -42,10 +46,11 @@ jobs:
           title: 'chore(release): 1.1.1 [ci skip] 🚀'
           author: GitHub Actions <actions@github.com>
           branch: chore/release
-          branch-suffix: timestamp
+          branch-suffix: steps.branchsuffix.outputs.CURRENT_TIMESTAMP
         uses: peter-evans/create-pull-request@v4.0.4
       - run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
+          git push --set-upstream origin chore/release-{{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}
       - run: pnpm release
       - run: git push --follow-tags

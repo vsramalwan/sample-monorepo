@@ -36,7 +36,6 @@ jobs:
           node-version: 14
           cache: 'pnpm'
       - name: check pnpm store
-        if: steps.pnpm-store.outputs.cache-hit != 'true'
         run: pnpm store status
 
   lint:
