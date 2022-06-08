@@ -41,6 +41,12 @@ jobs:
           # echo "action_state=yellow" >> $GITHUB_ENV
       - run: |
           echo "${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}"
+      - run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git push --set-upstream origin chore/release-`${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}`
+      - run: pnpm release
+      - run: git push --follow-tags
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
@@ -48,11 +54,5 @@ jobs:
           title: 'chore(release): 1.1.1 [ci skip] 🚀'
           author: GitHub Actions <actions@github.com>
           branch: chore/release
-          branch-suffix: steps.branchsuffix.outputs.CURRENT_TIMESTAMP
+          branch-suffix: '${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}'
         uses: peter-evans/create-pull-request@v4.0.4
-      - run: |
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git push --set-upstream origin chore/release-{{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}
-      - run: pnpm release
-      - run: git push --follow-tags
