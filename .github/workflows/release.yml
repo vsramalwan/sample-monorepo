@@ -44,7 +44,7 @@ jobs:
       # 3. Create PR using branch from step #2
       # 4. get the latest tag (or tag from last commit) and set this tag as PR title
       - run: |
-          echo "${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}" >> $GITHUB_ENV
+          echo "CURRENT_TIMESTAMP=${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}" >> $GITHUB_ENV
       - name: step2
         run: |
           git config --local user.name "GitHub Actions"
