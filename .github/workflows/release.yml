@@ -39,14 +39,18 @@ jobs:
         run: |
           echo '::set-output name=CURRENT_TIMESTAMP::$(date +%s)'
           # echo "action_state=yellow" >> $GITHUB_ENV
+      # 1. Generate current Timestamp to suffix branch names
+      # 2. git push tags to the created branch
+      # 3. Create PR using branch from step #2
       - run: |
           echo "${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}"
-      - run: |
+      - name: step2
+        run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
-          git push --set-upstream origin chore/release-`${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}`
-      - run: pnpm release
-      - run: git push --follow-tags
+          git checkout -b chore/release-`${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}`
+          pnpm release
+          git push --follow-tags --set-upstream origin chore/release-`${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}`
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
