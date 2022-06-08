@@ -37,8 +37,10 @@ jobs:
           cache: 'pnpm'
       - id: branchsuffix
         run: |
-          echo '::set-output name=CURRENT_TIMESTAMP::date +%s'
+          echo '::set-output name=CURRENT_TIMESTAMP::$(date +%s)'
           # echo "action_state=yellow" >> $GITHUB_ENV
+      - run: |
+          echo "${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}"
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
