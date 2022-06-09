@@ -39,7 +39,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
       # 1. get the latest tag and git push tags
-      - run: |
+      - name: Push tags
+        run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           pnpm release
@@ -57,7 +58,8 @@ jobs:
           base: main
         uses: peter-evans/create-pull-request@v4.0.4
       # 3. Add a label `ready-to-merge`
-      - uses: actions-ecosystem/action-add-labels@v1
+      - name: Add labels
+        uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: ready-to-merge
           number: ${{ steps.create_pull_request.outputs.pull-request-number }}
