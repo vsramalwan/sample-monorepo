@@ -1,6 +1,8 @@
 from_owner:
-  - github-actions[bot]
+  - github-actions
 required_labels:
   - ready-to-merge
 apply_labels:
   - merged
+auto_squash_merge_labels:
+  - auto-squash-merge
