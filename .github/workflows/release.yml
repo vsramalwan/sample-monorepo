@@ -14,6 +14,8 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[release skip]')"
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: checkout code repository
         uses: actions/checkout@v3
@@ -35,36 +37,33 @@ jobs:
           node-version: 14
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
-      - id: branchsuffix
+      # 1. Generate current Timestamp to suffix branch names
+      - id: timestamp
         run: |
           echo '::set-output name=CURRENT_TIMESTAMP::$(date +%s)'
-          # echo "action_state=yellow" >> $GITHUB_ENV
-      # 1. Generate current Timestamp to suffix branch names
-      # 2. git push tags to the created branch
-      # 3. Create PR using branch from step #2
-      # 4. get the latest tag (or tag from last commit) and set this tag as PR title
+          echo "CURRENT_TIMESTAMP=${{ steps.timestamp.outputs.CURRENT_TIMESTAMP }}" >> $GITHUB_ENV
       - run: |
-          echo "CURRENT_TIMESTAMP=${{ steps.branchsuffix.outputs.CURRENT_TIMESTAMP }}" >> $GITHUB_ENV
-      - name: step2
-        run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           git checkout -b chore/release
           pnpm release
-      # get the last pushed tag and output it
+      # 2. get the last tag
       - run: |
           echo "LATEST_TAG=$(git tag --sort=taggerdate | tail -1)" >> $GITHUB_ENV
+      # 3. Create PR using branch with the latest tag set as PR title
       - name: Create Pull Request
         with:
           committer: GitHub Actions <actions@github.com>
-          commit-message: 'chore(release): 1.1.1 [ci skip] 🚀'
-          title: 'chore(release): 1.1.1 [ci skip] 🚀'
+          commit-message: 'chore(release): ${env.LATEST_TAG} [ci skip] 🚀'
+          title: 'chore(release): ${env.LATEST_TAG} [ci skip] 🚀'
           author: GitHub Actions <actions@github.com>
           branch: chore/release
           base: main
         uses: peter-evans/create-pull-request@v4.0.4
       # auto-approve and auto-merge this PR
-
-      # push tags only when PR auto-approved and auto-merged
+      - uses: hmarr/auto-approve-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # 4. git push tags to the created branch only when PR auto-approved and auto-merged
       - run: |
           git push --follow-tags --set-upstream origin chore/release
