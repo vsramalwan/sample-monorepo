@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: main
-      - uses: pnpm/action-setup@v2.2.1
+      - uses: pnpm/action-setup@v2.2.2
         with:
           version: 6.32.10
           run_install: |
@@ -38,4 +38,4 @@ jobs:
           author: GitHub Actions <actions@github.com>
           branch: chore/update-dependencies
           branch-suffix: timestamp
-        uses: peter-evans/create-pull-request@v4.0.2
+        uses: peter-evans/create-pull-request@v4.0.4
