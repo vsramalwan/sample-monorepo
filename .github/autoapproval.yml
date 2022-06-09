@@ -1,0 +1,6 @@
+from_owner:
+  - github-actions[bot]
+required_labels:
+  - ready-to-merge
+apply_labels:
+  - merged
