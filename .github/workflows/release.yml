@@ -50,8 +50,8 @@ jobs:
         id: create_pull_request
         with:
           committer: GitHub Actions <actions@github.com>
-          commit-message: 'chore(release): ${env.LATEST_TAG} [ci skip] 🚀'
-          title: 'chore(release): ${env.LATEST_TAG} [ci skip] 🚀'
+          commit-message: "chore(release): ${{ env.LATEST_TAG }} [ci skip] 🚀"
+          title: "chore(release): ${{ env.LATEST_TAG }} [ci skip] 🚀"
           author: GitHub Actions <actions@github.com>
           branch: chore/release
           base: main
