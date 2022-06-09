@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.25](https://github.com/vsramalwan/sample-monorepo/compare/0.4.24...0.4.25) (2022-06-09)
+
+
+### Features
+
+* Create Release Branch and auto approve PRs ([#192](https://github.com/vsramalwan/sample-monorepo/issues/192)) ([24539b4](https://github.com/vsramalwan/sample-monorepo/commit/24539b42a2a67e66ff3e02a79d8a89cd8423a8d3))
+
 ### [0.4.24](https://github.com/vsramalwan/sample-monorepo/compare/0.4.23...0.4.24) (2022-06-08)
 
 
