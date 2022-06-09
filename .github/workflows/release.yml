@@ -40,15 +40,14 @@ jobs:
       # 1. Generate current Timestamp to suffix branch names
       - id: timestamp
         run: |
-          echo '::set-output name=CURRENT_TIMESTAMP::$(date +%s)'
-          echo "CURRENT_TIMESTAMP=${{ steps.timestamp.outputs.CURRENT_TIMESTAMP }}" >> $GITHUB_ENV
+          # echo '::set-output name=CURRENT_TIMESTAMP::$(date +%s)'
+          echo "CURRENT_TIMESTAMP=$(date +%s)" >> $GITHUB_ENV
+      # 2. get the latest tag
       - run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           git checkout -b chore/release
           pnpm release
-      # 2. get the last tag
-      - run: |
           echo "LATEST_TAG=$(git tag --sort=taggerdate | tail -1)" >> $GITHUB_ENV
       # 3. Create PR using branch with the latest tag set as PR title
       - name: Create Pull Request
@@ -60,10 +59,10 @@ jobs:
           branch: chore/release
           base: main
         uses: peter-evans/create-pull-request@v4.0.4
-      # auto-approve and auto-merge this PR
+      # 4. auto-approve and auto-merge this PR
       - uses: hmarr/auto-approve-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      # 4. git push tags to the created branch only when PR auto-approved and auto-merged
+      # 5. git push tags to the created branch only when PR auto-approved and auto-merged
       - run: |
           git push --follow-tags --set-upstream origin chore/release
