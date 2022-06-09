@@ -39,12 +39,11 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
       # 1. get the latest tag and git push tags
-      - name: Push tags
+      - name: Fetch latest tag
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           pnpm release
-          git push --follow-tags
           echo "LATEST_TAG=$(git tag --sort=taggerdate | tail -1)" >> $GITHUB_ENV
       # 2. Create PR using branch with the latest tag set as PR title
       - name: Create Pull Request
@@ -57,6 +56,11 @@ jobs:
           branch: chore/release
           base: main
         uses: peter-evans/create-pull-request@v4.0.4
+      - name: Push tags
+        run: |
+          git fetch origin
+          git checkout chore/release
+          git push --follow-tags --set-upstream origin chore/release
       # 3. Add a label `ready-to-merge`
       - name: Add labels
         uses: actions-ecosystem/action-add-labels@v1
