@@ -40,17 +40,17 @@ jobs:
           cache: 'pnpm'
       - name: Fetch latest tag
         run: |
-          git config --local user.name "GitHub Actions Bot"
-          git config --local user.email "actions-bot@github.com"
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
           pnpm release
           echo "LATEST_TAG=$(git tag --sort=taggerdate | tail -1)" >> $GITHUB_ENV
       - name: Create Pull Request
         id: create_pull_request
         with:
-          committer: GitHub Actions Bot <actions-bot@github.com>
+          committer: GitHub Actions <actions@github.com>
           commit-message: "chore(release): ${{ env.LATEST_TAG }} [ci skip] 🚀"
           title: "chore(release): ${{ env.LATEST_TAG }} [ci skip] 🚀"
-          author: GitHub Actions Bot <actions-bot@github.com>
+          author: GitHub Actions <actions@github.com>
           branch: chore/release
           base: main
         uses: peter-evans/create-pull-request@v4.0.4
