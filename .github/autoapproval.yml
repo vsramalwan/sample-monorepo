@@ -1,0 +1,11 @@
+_extends: github-settings
+
+from_owner: 
+  - github-actions[bot]
+  - actions-user
+
+required_labels: 
+  - ready-to-merge
+
+apply_labels:
+  - merged
