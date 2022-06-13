@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.31](https://github.com/vsramalwan/sample-monorepo/compare/0.4.24...0.4.31) (2022-06-13)
+
+
+### Features
+
+* Create Release Branch and auto approve PRs ([#192](https://github.com/vsramalwan/sample-monorepo/issues/192)) ([24539b4](https://github.com/vsramalwan/sample-monorepo/commit/24539b42a2a67e66ff3e02a79d8a89cd8423a8d3))
+* Use Auto approval Token ([#207](https://github.com/vsramalwan/sample-monorepo/issues/207)) ([e3d1983](https://github.com/vsramalwan/sample-monorepo/commit/e3d1983cb11f2039c9af0109d1503f844745496b))
+* Use Auto-approval GHA for Release PRs ([#196](https://github.com/vsramalwan/sample-monorepo/issues/196)) ([673c175](https://github.com/vsramalwan/sample-monorepo/commit/673c175c0ab2be360731bbd8681cee5e4ed4b8a7))
+* Use Autoapproval Bot ([#198](https://github.com/vsramalwan/sample-monorepo/issues/198)) ([1091698](https://github.com/vsramalwan/sample-monorepo/commit/1091698283a772b2c6d3152216d83e32f6564e86))
+* Use Github Auto approve API and Auto merge GHA ([#201](https://github.com/vsramalwan/sample-monorepo/issues/201)) ([1e8f7f6](https://github.com/vsramalwan/sample-monorepo/commit/1e8f7f67904ab496f6908ee9ee12500b7928311c))
+
+
+### Bug Fixes
+
+* env variable syntax ([136578c](https://github.com/vsramalwan/sample-monorepo/commit/136578cd67a340d2553f80f35429a1cd3c984174))
+* label automerge ([6e978a6](https://github.com/vsramalwan/sample-monorepo/commit/6e978a664e2f6156381f59fc14eee92140588623))
+* Pull Request Number for Auto-merge ([#209](https://github.com/vsramalwan/sample-monorepo/issues/209)) ([83a56de](https://github.com/vsramalwan/sample-monorepo/commit/83a56de34174ba118358d4dfa3293c9c4b58a47d))
+* revert and use auto approval gha ([0d59869](https://github.com/vsramalwan/sample-monorepo/commit/0d5986989620dc5d2a8ec3ac3805a8e5e150647f))
+* Use Different User to create PRs ([#203](https://github.com/vsramalwan/sample-monorepo/issues/203)) ([0e6408c](https://github.com/vsramalwan/sample-monorepo/commit/0e6408c9b4992b418e6861ddfbd5c4a3fd5ff255))
+
 ### [0.4.30](https://github.com/vsramalwan/sample-monorepo/compare/0.4.24...0.4.30) (2022-06-13)
 
 
