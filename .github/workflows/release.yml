@@ -64,6 +64,9 @@ jobs:
         with:
           labels: ready-to-merge
           number: ${{ steps.create_pull_request.outputs.pull-request-number }}
+      - name: PULL_REQUEST as env
+        run: |
+          echo "PULL_REQUEST={{ env.PULL_REQUEST_NUMBER}}" >> $GITHUB_ENV
       # - name: Auto approve
       #   uses: hmarr/auto-approve-action@v2
       #   with:
