@@ -62,7 +62,7 @@ jobs:
       - name: Add label
         uses: actions-ecosystem/action-add-labels@v1
         with:
-          labels: ready-to-merge
+          labels: automerge
           number: ${{ steps.create_pull_request.outputs.pull-request-number }}
       - name: PULL_REQUEST as env
         run: |
