@@ -80,6 +80,6 @@ jobs:
           --header 'content-type: application/json' \
           -d '{"event":"APPROVE"}'
       - name: automerge
-        uses: pascalgn/automerge-action@v0.15.3
+        uses: pascalgn/automerge-action@v0.15.5
         env:
           GITHUB_TOKEN: ${{ secrets.AUTO_APPROVAL_GH_TOKEN }}
